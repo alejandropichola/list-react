@@ -24,7 +24,7 @@ function UserForm(props: any) {
       const user = users.find((item: UserType) => item.id === id);
       setValues(user);
     }
-  }, [values, id, users]);
+  }, [id, users]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,6 +36,7 @@ function UserForm(props: any) {
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.name, e.target.value)
     setValues({
       ...values,
       [e.target.name]: e.target.value,
