@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "express": "^4.17.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -21,10 +22,12 @@
     "validator": "^13.7.0"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "node server.js",
+    "start:craco": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
