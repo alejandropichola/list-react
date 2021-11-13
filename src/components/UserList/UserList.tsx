@@ -1,15 +1,15 @@
 import React from "react";
-import User from "../User/User";
+import { useSelector } from "react-redux";
+import { UserType } from "@/types";
+import User from "@/components/User/User";
 
 import "./_user-list.scss";
-const data = [
-  { name: "Juan", email: "arg@gmail.com", phone: "+543242343", country: "AR" },
-  { name: "Leao", email: "salsa@gmail.com", phone: "+336724215", country: "BR" },
-  { name: "Elpidio", email: "boliv@gmail.com", phone: "+456754324", country: "BO" },
-  { name: "Michelle", email: "cl@gmail.com", phone: "+45467543", country: "CL" },
-];
 
-const UserList = () => {
+function UserList() {
+  const data: Array<UserType> = useSelector((state:any) => {
+    return state.user
+  })
+
   return (
     <section>
       <h2>User list</h2>
@@ -17,7 +17,9 @@ const UserList = () => {
         <ul>
           <li>Name</li>
           <li>Email</li>
+          <li>Country</li>
           <li>Phone</li>
+          <li>Option</li>
         </ul>
       </div>
       <ul className="user-list">
@@ -28,6 +30,7 @@ const UserList = () => {
               email={user.email}
               phone={user.phone}
               country={user.country}
+              id={user.id}
             />
           </li>
         ))}

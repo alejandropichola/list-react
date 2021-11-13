@@ -1,0 +1,50 @@
+.app-modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &__action, &__body {
+        margin: 10px 0;
+    }
+
+    &__container {
+        width: 300px;
+        background-color: #FFF;
+        padding: 8px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 5px rgba(136, 136, 136, 0.5);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__button-close {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        background-color: rgb(230, 80, 103);
+        color: #FFF;
+        border-radius: 100%;
+        font-size: 12px;
+        font-weight: bold;
+        border: none;
+        transition: ease-in-out 100ms transform;
+
+        &:hover {
+            box-shadow: 2px 2px 4px 3px rgba(136, 136, 136, 0.5);
+            transform: scale(1.1);
+        }
+    }
+}
