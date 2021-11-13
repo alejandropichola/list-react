@@ -36,7 +36,6 @@ function UserForm(props: any) {
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.name, e.target.value)
     setValues({
       ...values,
       [e.target.name]: e.target.value,
